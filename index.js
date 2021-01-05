@@ -10,9 +10,17 @@ function func_1($kuch_bhe_naam) {
 // calling the function
 $name_of_the_human = "this is is the name"
 func_1($name_of_the_human)
-class $employee {
-    salary = 10000
-    dest = "Office cubicle"
+//variables in js
+let a = 10
+a++
+console.log(a)
+let b = 10
+++b
+console.log(b)
+let $employee = {
+    salary: 10000,
+    post: 'cubicle',
+    dest: 'dev ops'
 }
 const $employee_1 = $employee
 console.log($employee_1.dest)

@@ -248,7 +248,7 @@ ul li{
     margin:3px;
     background-color: aqua;
     text-align: center;
-    line-height: 100px;
+    line-height: 50px;
 }
 /* this is how we can select nt child */
 .main-grid{
