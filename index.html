@@ -35,7 +35,10 @@
 <body>
     <script>
         let name = prompt("what is your name", "guest")
-        document.write('<h1 class="heading_1" align="center" id="head_ing"><font size = "+5" ><i>WELCOME ' + name + '!!</i></font ></h1>')
+        document.write(`<h1 class="heading_1" align="center" id="head_ing"><font size = "+5" ><i>WELCOME ${name}!!
+            </i></font ></h1>`)
+        let $container = document.getElementById("demo");
+        console.log($container);
     </script>
     <div id="new_flex">
         <img class="photo_jpg" src="photo.jpg">
@@ -45,7 +48,7 @@
             Hello to css our new friend!!!
         </p>
     </div>
-    <P>bhoot din hogeye website banaye chalaye shuru karte hai</P>
+    <p id="demo">bhoot din hogeye website banaye chalaye shuru karte hai</p>
     <div class="ajab">
         <ul type="square">
             <li>this is the random text</li>
@@ -65,7 +68,7 @@
         <!-- Make notes from here-->
         &nbsp;&nbsp;
         <!-- this is used for making spaces-->
-        <form action="backend.php" method="post">
+        <form action="/index.html" method="post">
             [+]TERA naam ke hai:
             <input type="text" name="email" id="name">
             <br><br>
@@ -85,20 +88,39 @@
                 <option value="sd" selected>oh yeah!! carss</option>
                 <option value="fg">oh yeah!! cars</option>
             </select>
-            <input type="button" value="SUBMIT NOW!!">
+            <button id="btn">Click here!</button>
             <br><br>
             <br><br>
         </form>
     </div>
+    <p id="text">LOREM IPSUM KAUN HAI BTW?</p>
+    <button id="btn" onclick="toogle_text()">Click here!</button>
+    <p id="tetx-1"></p>
+    <button id="btn-1" onclick="gen_text()">CLICK ME to gen text</button>
+    <script>
+        function toogle_text() {
+            let temp_var = document.getElementById("text");
+            if (temp_var.style.display != 'none') {
+                temp_var.style.display = 'none';
+            }
+            else {
+                temp_var.style.display = 'block'
+            }
+        }
+        function gen_text() {
+            let temp_var = document.getElementById('tetx-1');
+            temp_var.innerHTML = `<p>this is dynamic text added</p>`;
+            let temp_str = `<p>this is dynamic text added</p>`;
+            temp_var.insertAdjacentHTML('beforeend', temp_str)
+        }
+
+    </script>
     <!-- here is HTML semantics-->
     <details>
         <summary>this is the detail HTML semantics</summary>
         <summary>lorem ipsum</summary>
         <summary>lorem ipsum</summary>
     </details>
-    <script>
-        console.log("ye nhi aa gaya kya")
-    </script>
     <div class="main_div">
         <div class="new_div">
             <h4>Lorem ipsum</h4>
@@ -229,5 +251,9 @@
     </div>
     <!-- haha ho gaya commit-->
 </body>
+<script>
+    let temp_var = document.getElementById("demo");
+    console.log(temp_var);
+</script>
 
 </html>
